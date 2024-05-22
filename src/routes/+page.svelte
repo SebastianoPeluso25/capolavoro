@@ -18,7 +18,7 @@
 <div class="accordion">
     <Accordion id=1   titolo="La storia della mafia" link="/storiadellamafia/" />
     <Accordion id=2  titolo="La mafia oggi ( CyberMafia )"  link="/mafiaoggi/" />
-    <Accordion id=3  titolo="Il dolor di Mafia"  link=/dolormafia/ />
+    <Accordion id=3  titolo="Il Dolor di Mafia"  link=/dolormafia/ />
 </div>
 
 

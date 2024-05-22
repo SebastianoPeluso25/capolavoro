@@ -8,6 +8,7 @@
     import Search from "../lib/components/search_components/search.svelte";
     import Noresult from "../lib/components/search_components/noresult.svelte";
     import Menu from "../lib/components/search_components/menu.svelte";
+    import Modal from "../lib/components/modal.svelte";
 
 
     import {data} from "../lib/data";
@@ -87,6 +88,11 @@
         <div class="right">
             <slot />
         </div>
+
+        <Modal>
+            
+        </Modal>
+
 
     </div>
 

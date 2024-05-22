@@ -7,7 +7,7 @@
 
 
 
-<HeaderTop titolo="Il dolor di mafia" />
+<HeaderTop titolo="Il Dolor di mafia" />
 
 <div class="list_accordion">
     <Dolormafia
@@ -35,7 +35,7 @@
 
   <Dolormafia
     id=4
-    titolo="di una fratello ... Salvatore Borsellino"
+    titolo="di una moglie ... "
     />
 
 </div>

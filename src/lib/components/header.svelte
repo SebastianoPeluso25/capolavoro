@@ -16,7 +16,7 @@
             </span>
     </div>
     <div class="item">
-        <span class="material-symbols-outlined">calendar_month</span>
+        <span class="material-symbols-outlined"></span>
     </div>
 
 </div>

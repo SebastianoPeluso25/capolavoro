@@ -37,14 +37,16 @@
 			</div>
 			
 			
-			<button><a href={link}>Leggi</a></button>
+			<button class="pc" ><a href={link}>Leggi</a></button>
+			<button class="mobile" ><a href={link}>Leggi</a></button>
 		</div>
 	
 </section>
 
 
 <style>
-	.book { 
+	@media(min-width:480px){
+		.book { 
 			width: 85%;
 			border-radius: 8px;
 			box-shadow: 1px 1px 6px 2px #dc2f02;
@@ -54,7 +56,88 @@
 			
 		}
 
-		.item > button{
+		.item > .pc{
+			color: white;
+			background-color: #dc2f02;
+			border: none;
+			padding: 10px;
+			margin: 10px;
+			border-radius: 8px;
+			font-size: 22px;
+		}
+
+		.item > .mobile{
+			display: none;
+		}
+
+		button > a{
+			text-decoration: none;
+			color: white;
+			
+		}
+
+		.item > .tag {
+			background-color: #ffac97;
+			font-size: 14px;
+			padding: 8px;
+			border: 2px solid red;
+			border-radius: 10px;
+			
+		}
+
+		.item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			
+			font-size: 25px;
+			
+			
+			
+		}
+
+        .item:hover{
+            cursor: pointer;
+        }
+        .item > h1{
+			width: 80%;
+            font-size: 30px;
+			font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .item > img{
+            width: 100%;
+        }
+
+		.item > .small-description{
+			width: 80%;
+		}
+
+		.item > .small-description > p{
+			font-size: 14px;
+			text-align: center;
+		}
+
+	}
+
+	/**MOBILE  */
+
+	@media(max-width:480px){
+		.book { 
+			width: 85%;
+			border-radius: 8px;
+			box-shadow: 1px 1px 6px 2px #dc2f02;
+			margin: 8px auto;
+			background-color: white;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			
+		}
+
+		.item > .pc{
+			display: none;
+		}
+
+		.item > .mobile{
 			color: white;
 			background-color: #dc2f02;
 			border: none;
@@ -113,12 +196,8 @@
 			font-size: 14px;
 			text-align: center;
 		}
-
-		.item > .material-symbols-outlined{
-			font-size: 60px;
-			
-		}
-
+	
+	}
 	
 
 	
