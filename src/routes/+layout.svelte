@@ -8,20 +8,22 @@
     import Search from "../lib/components/search_components/search.svelte";
     import Noresult from "../lib/components/search_components/noresult.svelte";
     import Menu from "../lib/components/search_components/menu.svelte";
+
     import Modal from "../lib/components/modal.svelte";
+    
 
 
     import {data} from "../lib/data";
 
-    let tags = []; // menu built from bookData
-	let selectedtag = ""; //  menu selection	
+    let tags = []; 
+	let selectedtag = ""; 	
 
 	
 	
 	const getLanguages = () => {
-		for (let bookObj of data) {
-			if (!tags.includes(bookObj.tag)) {
-				tags = [...tags, bookObj.tag]
+		for (let cardObj of data) {
+			if (!tags.includes(cardObj.tag)) {
+				tags = [...tags, cardObj.tag]
 			}
 		}
 		tags = tags.sort();
@@ -29,52 +31,58 @@
 	onMount(() => getLanguages());
 	
 	
-	// Query results
-	let filteredBooks = [];
+	
+	let filteredCards = [];
 	
 	// For Select Menu
-	$: if (selectedtag) getBooksByLang();
-	$: console.log(filteredBooks, selectedtag);
+	$: if (selectedtag) getCardsByLang();
+	$: console.log(filteredCards, selectedtag);
 	
-	const getBooksByLang = () => {
-		// resets search input if menu is being used
+	const getCardsByLang = () => {
+		
 		searchTerm = ""; 
 		
 		if (selectedtag === "all") {
-			return filteredBooks = [];
+			return filteredCards = [];
 		} 
-		return filteredBooks = data.filter(book => book.tag === selectedtag);
+		return filteredCards = data.filter(card => card.tag === selectedtag);
 
 	}	
 	
-	// For Search Input
+	
 	let searchTerm = "";
-	// resets language menu if search input is used
+	
 	$: if (searchTerm) selectedtag = "";
 	
-	const searchBooks = () => {	
-		return filteredBooks = data.filter(book => {
-			let bookTitle = book.title.toLowerCase();
-			return bookTitle.includes(searchTerm.toLowerCase())
+	const searchcards = () => {	
+		return filteredCards = data.filter(card => {
+			let cardTitle = card.title.toLowerCase();
+			return cardTitle.includes(searchTerm.toLowerCase())
 		});
 	}
+
+    /*modal*/
+
+    let showModal = false;
+
+
 
 </script>
 
     <Header  />
 
     <div class="search_container">
-        <Search bind:searchTerm on:input={searchBooks} />
+        <Search bind:searchTerm on:input={searchcards} />
         <Menu {tags} bind:selectedtag  />
     </div>
 
     <div class="container">
         <div class="left">
             <div class="card">
-                {#if searchTerm && filteredBooks.length === 0}
+                {#if searchTerm && filteredCards.length === 0}
                 <Noresult />	
-            {:else if filteredBooks.length > 0}
-                {#each filteredBooks as {tag,link,img, title, description}}
+            {:else if filteredCards.length > 0}
+                {#each filteredCards as {tag,link,img, title, description}}
                     <Card {tag} {link} {img} {title} {description}/>
                 {/each}	
             {:else}
@@ -84,16 +92,28 @@
             {/if}
             </div>
 
+            <div class="card_mobile">
+                {#if searchTerm && filteredCards.length === 0}
+                <Noresult />	
+            {:else if filteredCards.length > 0}
+                {#each filteredCards as {tag,link,img, title, description}}
+                <Card bind:showModal {tag} {link} {img} {title} {description}>
+                    <slot/>
+                    </Card>
+                {/each}	
+            {:else}
+                {#each data as {tag, link, img, title, description}}
+                    <Card bind:showModal {tag} {link} {img} {title} {description}>
+                    <slot/>
+                    </Card>
+                {/each}	
+            {/if}
+            </div>
         </div>
+
         <div class="right">
-            <slot />
+            <slot/>
         </div>
-
-        <Modal>
-            
-        </Modal>
-
-
     </div>
 
 
@@ -144,6 +164,10 @@
         row-gap: 10px;
     }
 
+    .left > .card_mobile{
+        display: none;
+    }
+
     .container > .right{
         border-radius: 10px;
 		box-shadow: 1px 1px 6px 2px #dc2f02;
@@ -153,6 +177,8 @@
         
         
     }
+
+    
 
 }
 
@@ -179,8 +205,8 @@
         width: 90%;
         margin:  auto;
         
-        display: grid;
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column-reverse;
     }
 
 
@@ -192,10 +218,17 @@
     }
 
     .left > .card{
+        display: none;
+    }
+
+    .left > .card_mobile{
         display: flex;
         flex-direction: column;
         row-gap: 10px;
     }
+
+
+    
 
 
     

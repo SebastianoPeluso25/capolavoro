@@ -1,6 +1,7 @@
 <script>
 	import { scale } from 'svelte/transition';
 	import { expoInOut } from 'svelte/easing';
+	import Modal from './modal.svelte';
 	
 	import 'framework7-icons';
 	export let title;
@@ -9,14 +10,20 @@
     export let link;
 	export let tag;
 
+	export let showModal = false;
+
+let dialog; // HTMLDialogElement
+
+$: if (dialog && showModal) dialog.showModal();
+
+	
+
 	
 
 </script>
 
 <svelte:head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
-    
 </svelte:head>
 
 
@@ -36,12 +43,22 @@
 				<p>{description}</p>
 			</div>
 			
+			<button class="pc"  ><a href={link} >Leggi</a></button>
+			<button class="mobile" on:click={()=>showModal = true} ><a href={link} >Leggi</a></button>
 			
-			<button class="pc" ><a href={link}>Leggi</a></button>
-			<button class="mobile" ><a href={link}>Leggi</a></button>
 		</div>
-	
+
+
 </section>
+
+	<Modal bind:showModal>
+		<slot/>
+	</Modal>
+
+
+
+
+
 
 
 <style>
@@ -56,6 +73,9 @@
 			
 		}
 
+
+
+
 		.item > .pc{
 			color: white;
 			background-color: #dc2f02;
@@ -69,6 +89,7 @@
 		.item > .mobile{
 			display: none;
 		}
+
 
 		button > a{
 			text-decoration: none;
@@ -133,9 +154,7 @@
 			
 		}
 
-		.item > .pc{
-			display: none;
-		}
+
 
 		.item > .mobile{
 			color: white;
@@ -147,6 +166,10 @@
 			font-size: 22px;
 			
 
+		}
+
+		.item > .pc{
+			display: none;
 		}
 
 		button > a{

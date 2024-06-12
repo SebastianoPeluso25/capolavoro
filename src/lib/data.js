@@ -40,10 +40,10 @@ export const data = [
     },
 
     {
-        "link": "/Giuseppefava/",
+        "link": "/depistaggioAttilioManca/",
         "img": "",
         "title": "Depistaggio Attilio Manca",
-        "description": "Giuseppe Fava nato a Palazzolo Acreide (SR) il 15 settembre 1925 ed è morto ...",
+        "description": "Attilio Manca giovane e promettente urologo italiano, originario di Barcellona Pozzo di Gotto ...",
         "tag": "Viterbo"
     },
     

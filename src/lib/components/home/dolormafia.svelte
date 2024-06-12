@@ -43,8 +43,11 @@
 {#if open}
 <div class="dettagli">
     <img src={link_img} alt="">
-    <p>{para1}</p>
-    <p>{para2}</p>
+    {#if para1 && para2 != 'undefined'}
+        <p>{para1}</p>
+        <p>{para2}</p>
+    {/if}
+
 </div>
 {/if}
 

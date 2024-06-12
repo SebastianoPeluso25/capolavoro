@@ -47,7 +47,9 @@
     <p>Partito da Ciampino con un jet di servizio intorno alle 16:45, atterra all'aeroporto Punta Raisi di Palermo.<br> Qui trova ad attenderlo 3 Fiat Croma blindate con la scorta.</p>
     <p>Falcone si mette alla guida della Croma bianca. In macchina con lui ci sono la moglie e l'autista giudiziario Giuseppe Costanza. </p>
     <p>le prime due macchine sono blindate, mentre la terza no. Quella con Falcone alla guida è l'auto in mezzo.</p>
-    <p>Riempiono 5 metri di conduttura con 500 chili di tritolo stivati in 13 bidoncini, usando uno skateboard per farli scivolare nel buio. Confezionano il detonatore con esplosivo T4. L’innesco è collegato al telecomando di una banalissima auto giocattolo.​</p>
+    <p>Sull'autostrada A29, nei pressi dello svincolo di Capaci, vicino a Palermo.</p>
+    <p></p>
+    <p>Giovanni Brusca e i suoi scagnozzi riempiono 5 metri di conduttura con 500 chili di tritolo stivati in 13 bidoncini, usando uno skateboard per farli scivolare nel buio. Confezionano il detonatore con esplosivo T4. L’innesco è collegato al telecomando di una banalissima auto giocattolo.​</p>
     <p>I killer sono Giovanni Brusca e i suoi soldati, appostati sull’altura a 600 metri in linea d’aria, coperti da una centralina Enel. Brusca ha provato la sincronia una decina di volte, mentre una delle sue auto correva alla velocità stabilita.</p>
 </div>
 
