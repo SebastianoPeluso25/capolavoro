@@ -64,11 +64,11 @@
 
     let showModal = false;
 
-    let startmodal = true;
+    /* let startmodal = true; */
 
 </script>
 
-<StartModal bind:startmodal />
+
 
     <Header  />
 
@@ -155,12 +155,12 @@
     .container > .left{
         
         width: 100%;
-        height: 800px;
+/*         height: 800px;
 
         contain: content;
-        overflow-y: scroll; /* Add the ability to scroll */
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
+        overflow-y: scroll; 
+        -ms-overflow-style: none; 
+        scrollbar-width: none;  */
         
     }
 
