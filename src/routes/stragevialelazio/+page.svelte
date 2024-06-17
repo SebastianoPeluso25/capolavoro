@@ -50,12 +50,12 @@
     <h2>Coinvolti nell'attentato</h2>
     <div class="table">
         <div class="riga">
-            <img src="https://vivi.libera.it/documenti/anagrafiche/agostino_catalano.jpg" alt="catalano">
-            <div class="title">Agostino Catalano</div>
+            
+            <div class="title">Salvatore Bevilacqua</div>
         </div>
         <div class="riga">
-            <img src="https://cdn.gelestatic.it/repubblica/invececoncita/2017/07/Emanuela-loi.jpg" alt="emanuela loi">
-            <div class="title">Emanuela Loi</div>
+            
+            <div class="title">Giovanni Domè</div>
         </div>
     </div>
 </div>
@@ -132,7 +132,7 @@
     .vittime > .table{
         display: grid;
         margin: auto;
-        row-gap: 2vh;
+        row-gap: 4vh;
 
         
     }
@@ -154,9 +154,9 @@
     }
 
     .riga > .title{
-        font-size: 20px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        width: 30%;
+        font-size: 25px;
+        font-family: "Pacifico", cursive;
+        width: 40%;
 
     }
 	

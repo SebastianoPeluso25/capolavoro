@@ -119,7 +119,7 @@ $: if (dialog && showModal) dialog.showModal();
 		}
 
         .item:hover{
-            cursor: pointer;
+            
         }
         .item > h1{
 			width: 80%;

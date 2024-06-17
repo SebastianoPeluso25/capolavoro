@@ -55,12 +55,16 @@
     <h2>Vittime</h2>
     <div class="table">
         <div class="riga">
-            <img src="" alt="">
-            <div class="title"> </div>
+            
+            <div class="title">Carlo Alberto Dalla Chiesa </div>
+        </div>
+		<div class="riga">
+			
+            <div class="title">Emanuela Setti Carraro </div>
         </div>
         <div class="riga">
-            <img src="" alt="">
-            <div class="title"> </div>
+            
+            <div class="title">Domenico Russo </div>
         </div>
         
     </div>
@@ -149,6 +153,7 @@
         align-items: center;
         column-gap: 4vh;
         justify-content: center;
+		
     }
 
     .riga > img{
@@ -160,9 +165,10 @@
     }
 
     .riga > .title{
-        font-size: 20px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        width: 30%;
+        font-size: 25px;
+        font-family: "Pacifico", cursive;
+        width: 40%;
+		
 
     }
 </style>

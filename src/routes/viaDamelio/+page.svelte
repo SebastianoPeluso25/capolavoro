@@ -80,7 +80,8 @@
 
 <style>
 
-	h1{
+    @media(min-width:480px){
+        h1{
 		text-align: center;
 		font-family: "Pacifico", cursive;
 		font-weight: 100;
@@ -174,5 +175,110 @@
         width: 30%;
 
     }
+
+    }
+
+    /**MOBILE VERSION*/
+
+
+    @media(max-width:480px){
+        h1{
+		text-align: center;
+		font-family: "Pacifico", cursive;
+		font-weight: 100;
+  		font-style: normal;
+		font-size: 10vh;
+	}
+
+	.img > img{
+		width: 300px;
+		height: 250px;
+		border-radius: 2vh;
+	}
+
+	.carosello > button{
+		border-radius: 50%;
+		height: 40px;
+		background-color: none;
+		border: none;
+		
+	}
+
+	.carosello > button:hover{
+		background-color: orange;
+		color: white;
+		cursor: pointer;
+	}
+
+	.carosello{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		margin: auto;
+		justify-content: center;
+		align-items: center;
+		
+	}
+
+	.descrizione > p{
+        text-align: justify;
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .descrizione{
+        width: 86%;
+        margin: auto;
+    }
+
+    .vittime > h2{
+        text-align: center;
+        font-family: "Pacifico", cursive;
+		font-weight: 100;
+        font-size: 34px;
+  		font-style: normal;
+
+    }
+
+    .vittime{
+        margin: auto;
+        width: 86%;
+        
+    }
+
+    .vittime > .table{
+        display: grid;
+        margin: auto;
+        row-gap: 2vh;
+
+        
+    }
+
+    .table > .riga{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 4vh;
+        justify-content: center;
+    }
+
+    .riga > img{
+        width: 80px;
+        height: 90px;
+        border-radius: 8px;
+        
+        box-shadow: 4px 1px 4px 1px orange;
+    }
+
+    .riga > .title{
+        font-size: 20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        width: 30%;
+
+    }
+
+    }
+
+	
 	
 </style>

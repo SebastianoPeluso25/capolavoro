@@ -8,17 +8,16 @@
     import Search from "../lib/components/search_components/search.svelte";
     import Noresult from "../lib/components/search_components/noresult.svelte";
     import Menu from "../lib/components/search_components/menu.svelte";
-
-    import Modal from "../lib/components/modal.svelte";
+    import StartModal from "../lib/components/startModal.svelte";
     
 
 
     import {data} from "../lib/data";
 
     let tags = []; 
-	let selectedtag = ""; 	
+	let selectedtag = "";
 
-	
+	/**-------------------------*/
 	
 	const getLanguages = () => {
 		for (let cardObj of data) {
@@ -65,9 +64,11 @@
 
     let showModal = false;
 
-
+    let startmodal = true;
 
 </script>
+
+<StartModal bind:startmodal />
 
     <Header  />
 
@@ -75,6 +76,7 @@
         <Search bind:searchTerm on:input={searchcards} />
         <Menu {tags} bind:selectedtag  />
     </div>
+
 
     <div class="container">
         <div class="left">
@@ -153,8 +155,12 @@
     .container > .left{
         
         width: 100%;
-        
-        
+        height: 800px;
+
+        contain: content;
+        overflow-y: scroll; /* Add the ability to scroll */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
         
     }
 
@@ -211,7 +217,6 @@
 
 
     .container > .left{
-        
         width: 100%;
         margin: auto;
         
