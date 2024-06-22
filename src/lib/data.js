@@ -46,5 +46,12 @@ export const data = [
         "description": "Attilio Manca giovane e promettente urologo italiano, originario di Barcellona Pozzo di Gotto ...",
         "tag": "Viterbo"
     },
+    {
+        "link": "/donpinopuglisi/",
+        "img": "",
+        "title": "Strage Don Pino Puglisi",
+        "description": "Don Pino Puglisi nacque il 15 settembre 1937 a Palermo, in Sicilia ...",
+        "tag": "Palermo"
+    }
     
 ]

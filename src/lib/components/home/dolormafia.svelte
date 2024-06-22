@@ -4,7 +4,7 @@
     export let id = 0;
     export let titolo;
     export let link_img;
-    export let para1,para2;
+    export let para1,para2,para3;
     export let open = false;
 
     function change() {
@@ -43,9 +43,10 @@
 {#if open}
 <div class="dettagli">
     <img src={link_img} alt="">
-    {#if para1 && para2 != 'undefined'}
+    {#if para1 && para2 != 'undefined' && para3 != 'undefined'}
         <p>{para1}</p>
         <p>{para2}</p>
+        <p>{para3}</p>
     {/if}
 
 </div>

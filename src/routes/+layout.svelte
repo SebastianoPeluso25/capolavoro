@@ -155,12 +155,12 @@
     .container > .left{
         
         width: 100%;
-/*         height: 800px;
+       height: 800px;
 
         contain: content;
         overflow-y: scroll; 
         -ms-overflow-style: none; 
-        scrollbar-width: none;  */
+        scrollbar-width: none; 
         
     }
 
