@@ -105,7 +105,7 @@
                 {/each}	
             {:else}
                 {#each data as {tag, link, img, title, description}}
-                    <Card bind:showModal {tag} {link} {img} {title} {description}>
+                    <Card  {tag} {link} {img} {title} {description}>
                     <slot/>
                     </Card>
                 {/each}	

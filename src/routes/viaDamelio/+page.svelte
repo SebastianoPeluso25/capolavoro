@@ -17,7 +17,7 @@
 		index = (index - 1) % carouselPhotos.length
 	}
 
-/*     import audio from '$lib/prova.mp3'; */
+    import audio from '$lib/prova.mp3';
 
 </script>
 
@@ -43,11 +43,13 @@
 	arrow_forward_ios
 	</span></button>
 </div>
+<div class="div-audio">
+    <audio controls>
+        <source class="audio" src={audio} type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio>
+</div>
 
-<!-- <audio controls>
-    <source class="audio" src={audio} type="audio/mpeg">
-  Your browser does not support the audio element.
-  </audio> -->
 
 <div class="descrizione">
     <p>Il 19 luglio 1992, dopo aver pranzato con la moglie ed i figli, il giudice si è recato insieme alla scorta in via D'Amelio a trovare la madre.</p>
@@ -97,6 +99,10 @@
 		font-size: 10vh;
 	}
 
+    .div-audio{
+        margin-top: 4%;
+        text-align: center;
+    }
 
 	.img > img{
 		width: 600px;
@@ -199,6 +205,11 @@
 		font-size: 10vh;
 	}
 
+    .div-audio{
+        margin-top: 4%;
+        text-align: center;
+    }
+    
 	.img > img{
 		width: 300px;
 		height: 250px;

@@ -13,11 +13,11 @@
 	on:click|self={() => dialog.close()}
 >
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
-	<div on:click|stopPropagation>
+	<div on:click>
 		<slot />
 		<hr />
 		<!-- svelte-ignore a11y-autofocus -->
-		<button autofocus on:click={() => dialog.close()}>close</button>
+		<button  on:click={() => dialog.close()}>close</button>
 	</div>
 </dialog>
 
@@ -30,9 +30,7 @@
 		padding: 0;
 		margin-top: 5%;
 	}
-	dialog::backdrop {
-		background: rgba(0, 0, 0, 0.3);
-	}
+
 	dialog > div {
 		padding: 1em;
 	}

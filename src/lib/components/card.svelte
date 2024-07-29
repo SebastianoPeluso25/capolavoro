@@ -10,7 +10,7 @@
     export let link;
 	export let tag;
 
-	export let showModal = false;
+	export let showModal;
 
 let dialog; // HTMLDialogElement
 
