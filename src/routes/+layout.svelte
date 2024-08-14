@@ -77,7 +77,7 @@
         <Menu {tags} bind:selectedtag  />
     </div>
 
-
+    <!-- DESKTOP -->
     <div class="container">
         <div class="left">
             <div class="card">
@@ -93,6 +93,8 @@
                 {/each}	
             {/if}
             </div>
+
+            <!-- MOBILE -->
 
             <div class="card_mobile">
                 {#if searchTerm && filteredCards.length === 0}
@@ -209,7 +211,7 @@
 
     .container{
         width: 90%;
-        margin:  auto;
+        margin: 5% auto;
         
         display: flex;
         flex-direction: column-reverse;
@@ -218,7 +220,11 @@
 
     .container > .left{
         width: 100%;
-        margin: auto;
+        height: 800px;
+        contain: content;
+        overflow-y: scroll; 
+        -ms-overflow-style: none; 
+        scrollbar-width: none; 
         
     }
 
