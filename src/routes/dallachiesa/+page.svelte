@@ -16,6 +16,9 @@
 	const back = () => {
 		index = (index - 1) % carouselPhotos.length
 	}
+
+
+	import audio from '$lib/dallachiesa.mp3';
 </script>
 
 <svelte:head>
@@ -39,6 +42,13 @@
 <button on:click={next}><span class="material-symbols-outlined">
 	arrow_forward_ios
 	</span></button>
+</div>
+
+<div class="div-audio">
+    <audio controls>
+        <source class="audio" src={audio} type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio>
 </div>
 
 <div class="descrizione">
@@ -75,7 +85,8 @@
 
 <style>
 
-	h1{
+	@media(min-width:480px){
+		h1{
 		text-align: center;
 		font-family: "Pacifico", cursive;
 		font-weight: 100;
@@ -88,6 +99,11 @@
 		height: 350px;
 		border-radius: 2vh;
 	}
+
+	.div-audio{
+        margin-top: 4%;
+        text-align: center;
+    }
 
 	.carosello > button{
 		border-radius: 50%;
@@ -171,4 +187,111 @@
 		
 
     }
+	}
+
+	@media(max-width:480px){
+		h1{
+		text-align: center;
+		font-family: "Pacifico", cursive;
+		font-weight: 100;
+  		font-style: normal;
+		font-size: 44px;
+	}
+	
+	.img > img{
+		width: 300px;
+		height: 250px;
+		border-radius: 2vh;
+	}
+
+	.div-audio{
+        margin-top: 4%;
+        text-align: center;
+    }
+
+	.carosello > button{
+		border-radius: 50%;
+		height: 40px;
+		background-color: none;
+		border: none;
+		
+	}
+
+	.carosello > button:hover{
+		background-color: orange;
+		color: white;
+		cursor: pointer;
+	}
+
+	.carosello{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		margin: auto;
+		justify-content: center;
+		align-items: center;
+		
+	}
+
+	.descrizione > p{
+        text-align: justify;
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .descrizione{
+        width: 86%;
+        margin: auto;
+    }
+
+    .vittime > h2{
+        text-align: center;
+        font-family: "Pacifico", cursive;
+		font-weight: 100;
+        font-size: 34px;
+  		font-style: normal;
+
+    }
+
+    .vittime{
+        margin: auto;
+        width: 86%;
+        
+    }
+
+    .vittime > .table{
+        display: grid;
+        margin: auto;
+        row-gap: 2vh;
+
+        
+    }
+
+    .table > .riga{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 4vh;
+        justify-content: center;
+		
+    }
+
+    .riga > img{
+        width: 80px;
+        height: 90px;
+        border-radius: 8px;
+        
+        box-shadow: 4px 1px 4px 1px orange;
+    }
+
+    .riga > .title{
+        font-size: 25px;
+        font-family: "Pacifico", cursive;
+        width: 40%;
+		
+
+    }
+	}
+
+	
 </style>

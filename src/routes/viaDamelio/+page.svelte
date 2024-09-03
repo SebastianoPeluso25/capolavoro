@@ -17,7 +17,7 @@
 		index = (index - 1) % carouselPhotos.length
 	}
 
-    import audio from '$lib/prova.mp3';
+    import audio from '$lib/amelio.mp3';
 
 </script>
 
@@ -202,7 +202,7 @@
 		font-family: "Pacifico", cursive;
 		font-weight: 100;
   		font-style: normal;
-		font-size: 10vh;
+		font-size: 44px;
 	}
 
     .div-audio{
