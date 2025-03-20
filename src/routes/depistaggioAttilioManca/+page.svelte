@@ -78,13 +78,19 @@
 
 <style>
 
-	h1{
+@media(min-width:480px){
+        h1{
 		text-align: center;
 		font-family: "Pacifico", cursive;
 		font-weight: 100;
   		font-style: normal;
 		font-size: 10vh;
 	}
+
+    .div-audio{
+        margin-top: 4%;
+        text-align: center;
+    }
 
 	.img > img{
 		width: 600px;
@@ -122,49 +128,163 @@
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 
-    .descrizione > .table{
-        display: flex;
-        flex-direction: column;
-        width: 96%;
+    .descrizione{
+        width: 86%;
         margin: auto;
+    }
+
+    .vittime > h2{
+        text-align: center;
+        font-family: "Pacifico", cursive;
+		font-weight: 100;
+        font-size: 34px;
+  		font-style: normal;
+
+    }
+
+    .vittime{
+        margin: auto;
+        width: 86%;
         
     }
 
-    .table > .row{
+    .vittime > .table{
         display: grid;
-        grid-template-columns: 1fr 3fr;
-        padding: 8px;
-        column-gap: 10px;
+        margin: auto;
+        row-gap: 2vh;
+
+        
     }
 
-    .row > .title{
+    .table > .riga{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 4vh;
+        justify-content: center;
+    }
+
+    .riga > img{
+        width: 80px;
+        height: 90px;
+        border-radius: 8px;
+        
+        box-shadow: 4px 1px 4px 1px orange;
+    }
+
+    .riga > .title{
+        font-size: 20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        width: 30%;
+
+    }
+
+    }
+
+    /**MOBILE VERSION*/
+
+
+    @media(max-width:480px){
+        h1{
+		text-align: center;
+		font-family: "Pacifico", cursive;
+		font-weight: 100;
+  		font-style: normal;
+		font-size: 44px;
+	}
+
+    .div-audio{
+        margin-top: 4%;
         text-align: center;
-        box-shadow: 4px 4px #184e77, -1px 0 8px #184e77;
-        font-size: 22px;
-        padding: 10px;
-        border-radius: 4px;
-        align-content: center;
     }
-    .row > .title:hover{
-        background-color: rgb(248, 248, 162);
-        cursor: default;
-    }
-    .row > .testo{
-        text-align: center;
-        border-radius: 4px;
-        box-shadow: 4px 4px #184e77, -1px 0 8px #184e77;
-        font-size: 22px;
-        padding: 10px;
-        align-content: center;
-    }
-    .row > .testo:hover{
-        background-color:  rgb(248, 248, 162);
-        cursor: default;
+    
+	.img > img{
+		width: 300px;
+		height: 250px;
+		border-radius: 2vh;
+	}
+
+	.carosello > button{
+		border-radius: 50%;
+		height: 40px;
+		background-color: none;
+		border: none;
+		
+	}
+
+	.carosello > button:hover{
+		background-color: orange;
+		color: white;
+		cursor: pointer;
+	}
+
+	.carosello{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		margin: auto;
+		justify-content: center;
+		align-items: center;
+		
+	}
+
+	.descrizione > p{
+        text-align: justify;
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 
     .descrizione{
         width: 86%;
         margin: auto;
+    }
+
+    .vittime > h2{
+        text-align: center;
+        font-family: "Pacifico", cursive;
+		font-weight: 100;
+        font-size: 34px;
+  		font-style: normal;
+
+    }
+
+    .vittime{
+        margin: auto;
+        width: 86%;
+        
+    }
+
+    .vittime > .table{
+        display: grid;
+        margin: auto;
+        row-gap: 2vh;
+
+        
+    }
+
+    .table > .riga{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 4vh;
+        justify-content: center;
+    }
+
+    .riga > img{
+        width: 80px;
+        height: 90px;
+        border-radius: 8px;
+        
+        box-shadow: 4px 1px 4px 1px orange;
+    }
+
+    .riga > .title{
+        font-size: 20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        width: 30%;
+
+    }
+
     }
 	
 </style>

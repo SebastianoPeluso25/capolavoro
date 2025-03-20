@@ -4,7 +4,7 @@
 
 <footer>
 
-    Powered by Sebastiano Peluso
+    Powered by Sebastiano Peluso Copyright 2024-2025
 
 </footer>
 
