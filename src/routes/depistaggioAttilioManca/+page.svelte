@@ -179,6 +179,40 @@
 
     }
 
+
+    .table > .row{
+         display: grid;
+         grid-template-columns: 1fr 3fr;
+         padding: 8px;
+         column-gap: 10px;
+     }
+ 
+     .row > .title{
+         text-align: center;
+         box-shadow: 4px 4px #184e77, -1px 0 8px #184e77;
+         font-size: 22px;
+         padding: 10px;
+         border-radius: 4px;
+         align-content: center;
+     }
+     .row > .title:hover{
+         background-color: rgb(248, 248, 162);
+         cursor: default;
+     }
+     .row > .testo{
+         text-align: center;
+         border-radius: 4px;
+         box-shadow: 4px 4px #184e77, -1px 0 8px #184e77;
+         font-size: 22px;
+         padding: 10px;
+         align-content: center;
+     }
+     .row > .testo:hover{
+         background-color:  rgb(248, 248, 162);
+         cursor: default;
+     }
+ 
+
     }
 
     /**MOBILE VERSION*/
@@ -284,6 +318,38 @@
         width: 30%;
 
     }
+
+    .table > .row{
+         display: grid;
+         grid-template-columns: 1fr 3fr;
+         padding: 8px;
+         column-gap: 10px;
+     }
+ 
+     .row > .title{
+         text-align: center;
+         box-shadow: 4px 4px #184e77, -1px 0 8px #184e77;
+         font-size: 22px;
+         padding: 10px;
+         border-radius: 4px;
+         align-content: center;
+     }
+     .row > .title:hover{
+         background-color: rgb(248, 248, 162);
+         cursor: default;
+     }
+     .row > .testo{
+         text-align: center;
+         border-radius: 4px;
+         box-shadow: 4px 4px #184e77, -1px 0 8px #184e77;
+         font-size: 22px;
+         padding: 10px;
+         align-content: center;
+     }
+     .row > .testo:hover{
+         background-color:  rgb(248, 248, 162);
+         cursor: default;
+     }
 
     }
 	
